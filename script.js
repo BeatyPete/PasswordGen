@@ -140,8 +140,9 @@ var pwordInfo = {
   }
 }
 
-//button press starts criteria select
-document.getElementById("generate").onclick = pwordInfo.lengthSelect
+pwordInfo.lengthSelect();
+// broken button press starts criteria select
+//document.getElementById("generate").onclick = pwordInfo.lengthSelect
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
