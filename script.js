@@ -22,15 +22,17 @@ var genPword = function() {
     values = values + specialValues
   }
 
-
+  //random number generator for selecting characters
   for(var i = 0; i <= (pwordInfo.length) - 1; i++) {
     password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
   };
-
+  pwordInfo.password = password
   console.log("password is " + password);
+  writePassword();
 }
 
 var pwordInfo = {
+  password: null,
   length: null,
   lowercase: null,
   uppercase: null,
@@ -138,7 +140,6 @@ var pwordInfo = {
   }
 }
 
-pwordInfo.lengthSelect();
 //button press starts criteria select
 document.getElementById("generate").onclick = pwordInfo.lengthSelect
 
@@ -147,13 +148,13 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var pword = generatePassword();
+  //var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = pword;
+  passwordText.value = pwordInfo.password;
 
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+//generateBtn.addEventListener("click", writePassword);
 
