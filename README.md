@@ -5,4 +5,4 @@
 ##Mockup
 ![mockup](/mockup.png)
 
-Another one nighter. This one should be fully complete. The only thing is that I made the generate password button start the script to select the criteria, but when specifically loading the github page on google chrome the button no longer functioned. On firefox the github page worked fine and even pulling up the index.html file on chrome worked. So I just ended up starting the script as soon as the page loads.
+Another one nighter. This one should be fully complete. Press the generate password button to select criteria. Put in a number for length and answer y for yes or n for no for which characters you want in the password. Password prints automatically to page once all criteria have been selected.
